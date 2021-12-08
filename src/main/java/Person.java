@@ -12,13 +12,23 @@ public class Person {
     Sex gender;
     String emailAddress;
     int age;
+    List<Person> personList;
 
-    public Person(String name, LocalDate birthday, Sex gender, String emailAddress, int age) {
+    public Person(String name, LocalDate birthday, Sex gender, String emailAddress, int age, List<Person> personList) {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
         this.emailAddress = emailAddress;
         this.age = age;
+        this.personList = personList;
+    }
+
+    public List<Person> getPersonList() {
+        return personList;
+    }
+
+    public void setPersonList(List<Person> personList) {
+        this.personList = personList;
     }
 
     public int getAge() {
@@ -66,5 +76,15 @@ public class Person {
         System.out.println(this);
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", gender=" + gender +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", age=" + age +
+                ", personList=" + personList +
+                '}';
+    }
 }
