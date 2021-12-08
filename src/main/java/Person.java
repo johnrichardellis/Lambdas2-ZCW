@@ -11,12 +11,22 @@ public class Person {
     LocalDate birthday;
     Sex gender;
     String emailAddress;
+    int age;
 
-    public Person(String name, LocalDate birthday, Sex gender, String emailAddress) {
+    public Person(String name, LocalDate birthday, Sex gender, String emailAddress, int age) {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
         this.emailAddress = emailAddress;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getName() {
